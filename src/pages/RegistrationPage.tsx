@@ -32,6 +32,7 @@ const RegistrationPage = () => {
             type="text"
             placeholder="Username"
             value={username}
+            required
             minLength={3}
             maxLength={25}
             onChange={(e) => setUsername(e.target.value)}
@@ -51,7 +52,7 @@ const RegistrationPage = () => {
             value={password}
             minLength={6}
             maxLength={25}
-            required={true}
+            required
             onChange={(e) => setPassword(e.target.value)}
             className="bg-gray-700 text-white rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
           />
