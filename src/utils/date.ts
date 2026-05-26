@@ -21,7 +21,12 @@ export const addDays = (date: Date, days: number): Date => {
   return d
 }
 
-export const dateKey = (d: Date): string => d.toISOString().slice(0, 10)   // "2026-04-28"
+export const dateKey = (d: Date): string => {
+  const year = d.getFullYear()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
 
 export const isSameDay = (a: Date, b: Date) =>
   a.getFullYear() === b.getFullYear() &&
