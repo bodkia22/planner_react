@@ -1,5 +1,5 @@
 import type { Task } from "../types/task";
-import { isSameDay } from "../utils/date";
+import { isSameDay, dateKey } from "../utils/date";
 import TaskCard from "./TaskCard";
 import { useDroppable } from '@dnd-kit/core'
 
@@ -9,11 +9,11 @@ interface DayColumnProps {
 }
 
 const DayColumn = ({ date, tasks }: DayColumnProps) => {
-  const dropId = `day-${date.toISOString()}`   // унікальний ID для дропа
+  const dropId = `day-${dateKey(date)}`
   const { setNodeRef } = useDroppable({ id: dropId })
 
   const title = date.toLocaleDateString('en-US', { weekday: 'long' })
-  const subtitle = date.toLocaleDateString('en-US', { day: 'numeric', month: 'short' })  // "28 Apr"
+  const subtitle = date.toLocaleDateString('en-US', { day: 'numeric', month: 'short' })
   const isToday = isSameDay(date, new Date())
 
   return (
