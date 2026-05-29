@@ -34,7 +34,8 @@ Dated tasks land on the right days with the correct priority:
 - ✅ **Task management UI** — priorities, due dates, done/undone
 - 🔐 **Auth flow** — login / register with protected & public routes
 - 💬 **Conversation history** — switch between past chats with the assistant
-- ⚡ **Optimistic, cached data** via TanStack Query
+- ⚡ **Cached data** via TanStack Query
+- 🔀 **Drag-and-drop** — move tasks between days on the weekly board (powered by dnd-kit)
 
 ---
 
