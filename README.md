@@ -42,7 +42,7 @@ Dated tasks land on the right days with the correct priority:
 
 | Area          | Tech                                          |
 |---------------|-----------------------------------------------|
-| **Framework** | React 18 + TypeScript                         |
+| **Framework** | React 19 + TypeScript                         |
 | **Build**     | Vite                                          |
 | **Styling**   | Tailwind CSS                                  |
 | **Data**      | TanStack Query (server state, caching)        |
